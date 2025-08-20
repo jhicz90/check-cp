@@ -1,0 +1,21 @@
+{
+  "name": "check-cp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.14.0",
+  "dependencies": {
+    "dayjs": "^1.11.13",
+    "exceljs": "^4.4.0",
+    "playwright": "^1.54.2",
+    "puppeteer": "^24.16.2",
+    "validator": "^13.15.15"
+  }
+}
