@@ -28,14 +28,17 @@ export async function checkInvoiceSunat(invoiceData) {
 
     // Fill the form with invoice data
     await page.type('#numRuc', invoiceData.ruc);
+
     if (invoiceData.type === '02') {
       await page.select('#codComp', 'R1');
     } else {
       await page.select('#codComp', invoiceData.type);
     }
+
     await page.type('#numeroSerie', invoiceData.serie);
     await page.type('#numero', invoiceData.number);
     await page.type('#fechaEmision', invoiceData.date);
+    
     if (invoiceData.type !== '03') {
       await page.select('#codDocRecep', "6");
       await page.type('#numDocRecep', "20167712283");

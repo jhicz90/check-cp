@@ -50,7 +50,7 @@ for (const record of cpSunatRecords) {
         type: String(`0${record.tipo}`),
         serie: record.serie,
         number: String(record.numero),
-        date: dayjs(record.fecha).format('dd/MM/YYYY'),
+        date: dayjs(record.fecha).format('DD/MM/YYYY'),
         amount: String(record.importe)
       });
       
@@ -84,17 +84,6 @@ for (const record of cpSunatRecords) {
   console.log(`\n`);
   await delay(60);
 }
-
-// const record = cpSunatRecords[0];
-// const result = await checkInvoiceSunat({
-//   ruc: record.ruc,
-//   type: String(`0${record.tipo}`),
-//   serie: record.serie,
-//   number: String(record.numero),
-//   date: dayjs(record.fecha).format('DD/MM/YYYY'),
-//   amount: String(record.importe)
-// });
-// console.log(result);
 
 // al terminar finalizar el programa
 console.log('Finished processing all records');
